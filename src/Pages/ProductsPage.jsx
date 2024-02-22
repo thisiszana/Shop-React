@@ -1,7 +1,9 @@
+import { useProducts } from "../Context/ProductsContext";
+
 function ProductsPage() {
-  return (
-    <div>ProductsPage</div>
-  )
+  const products = useProducts();
+  console.log(products);
+  return <div>ProductsPage</div>;
 }
 
-export default ProductsPage
+export default ProductsPage;
