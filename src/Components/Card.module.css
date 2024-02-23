@@ -1,0 +1,70 @@
+.card {
+  width: 270px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: #fff;
+  border: 2px dashed #e2e2e2;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.card h3 {
+  color: #fe5d42;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 10px 0 30px;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions a {
+  font-size: 1.5rem;
+  height: 25px;
+  color: #fe5d42;
+  cursor: pointer;
+}
+
+.actions div {
+  display: flex;
+  align-items: center;
+}
+
+.actions div span {
+  width: 20px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.actions button {
+  background-color: #fe5d42;
+  color: #fff;
+  border: none;
+  font-size: 1.7rem;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  padding: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}

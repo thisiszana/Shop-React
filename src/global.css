@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  background-color: #202124;
+  /* background-color: #202124; */
 }
 
 * {
@@ -15,7 +15,7 @@ body {
   max-width: 1200px;
   min-height: 100vh;
   padding: 10px;
-  /* background-color: #f9fcfa; */
+  background-color: #f9fcfa;
 }
 
 a {
