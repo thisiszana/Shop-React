@@ -28,7 +28,7 @@ function ProductsPage() {
     setDisplayed(products);
     setQuery(getInitialQuery(searchParams));
   }, [products]);
-
+  
   useEffect(() => {
     setSearchParams(query);
     let finalProducts = searchProducts(products, query.search);
