@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { useCart } from "../Constant/CartContext";
+import { useCart } from "../Context/CartContext";
 
 import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
