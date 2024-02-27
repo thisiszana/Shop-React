@@ -1,0 +1,38 @@
+.sidebar {
+  position: sticky;
+  top: 30px;
+  width: 300px;
+  margin-right: 30px;
+  border: 2px dashed #fe5d42;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.sidebar div {
+  display: flex;
+  align-items: center;
+  color: #fe5d42;
+  margin-bottom: 15px;
+}
+
+.sidebar div svg {
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+.sidebar div span {
+  color: gray;
+  margin-left: 10px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #fe5d42;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
