@@ -17,7 +17,7 @@ function DetailsPage() {
   if (!productDetails) return <Loader />;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-aos="fade-up-right">
       <img src={image} alt={title} />
       <div className={styles.information}>
         <h3 className={styles.title}>{title}</h3>

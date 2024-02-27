@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+
 import { Link } from "react-router-dom";
+import AOS from "aos";
 
 import { useCart } from "../Context/CartContext";
 
@@ -6,8 +9,9 @@ import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
 import { MdDeleteOutline } from "react-icons/md";
 
-import styles from "./Card.module.css";
 import { productQuantity, shortenText } from "../Helpers/helper";
+import styles from "./Card.module.css";
+import "aos/dist/aos.css";
 
 function Card({ data }) {
   const { id, image, title, price } = data;
@@ -16,12 +20,16 @@ function Card({ data }) {
 
   const quantity = productQuantity(state, id);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const clickHandler = (type) => {
     dispatch({ type, payload: data });
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-aos="fade-up-right">
       <img src={image} alt={shortenText(title)} />
       <h3>{shortenText(title)}</h3>
       <p>{price} $</p>

@@ -20,7 +20,7 @@ function CheckoutPage() {
   return (
     <div className={styles.container}>
       <BasketCardSidebar state={state} clickHandler={clickHandler} />
-      <div className={styles.products}>
+      <div className={styles.products} data-aos="fade-up">
         {state.selectedItems.map((product) => (
           <BasketCard
             key={product.id}
