@@ -7,12 +7,14 @@ import PageNotFound from "./Pages/404";
 import ProductsProvider from "./Context/ProductsContext";
 import CartProvider from "./Context/CartContext";
 import Layout from "./Layout/Layout";
+import ScrollTop from "./Components/ScrollTop";
 
 function App() {
   return (
     <CartProvider>
       <ProductsProvider>
         <Layout>
+          <ScrollTop />
           <Routes>
             <Route index element={<Navigate to="/products" replace />} />
             <Route path="/products" element={<ProductsPage />} />
