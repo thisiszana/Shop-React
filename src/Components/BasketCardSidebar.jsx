@@ -13,12 +13,12 @@ function BasketCardSidebar({
       <div>
         <TbChecklist />
         <p>Total :</p>
-        <span>{total}</span>
+        <span>{total} $</span>
       </div>
       <div>
         <FaHashtag />
         <p>Quantity :</p>
-        <span>{itemsCounter} $</span>
+        <span>{itemsCounter}</span>
       </div>
       <div>
         <BsPatchCheck />
