@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
 import Card from "../Components/Card";
-import { useProducts } from "../Context/ProductsContext";
+// import { useProducts } from "../Context/ProductsContext";
 import Loader from "../Components/Loader";
 
 import {
-  createQueryObject,
   filterProducts,
   getInitialQuery,
   searchProducts,
@@ -16,7 +15,8 @@ import SearchBox from "../Components/SearchBox.jsx";
 import Sidebar from "../Components/Sidebar.jsx";
 
 function ProductsPage() {
-  const products = useProducts();
+  // const products = useProducts();
+  const products = [];
 
   const [search, setSearch] = useState("");
   const [displayed, setDisplayed] = useState([]);

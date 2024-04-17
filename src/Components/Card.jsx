@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
-import { useCart } from "../Context/CartContext";
+// import { useCart } from "../Context/CartContext";
 
 import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
@@ -16,16 +16,17 @@ import "aos/dist/aos.css";
 function Card({ data }) {
   const { id, image, title, price } = data;
 
-  const [state, dispatch] = useCart();
+  // const [state, dispatch] = useCart();
 
-  const quantity = productQuantity(state, id);
+  // const quantity = productQuantity(state, id);
+  const quantity = 0;
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   const clickHandler = (type) => {
-    dispatch({ type, payload: data });
+    // dispatch({ type, payload: data });
   };
 
   return (

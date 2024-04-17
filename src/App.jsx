@@ -4,15 +4,16 @@ import ProductsPage from "./Pages/ProductsPage";
 import DetailsPage from "./Pages/DetailsPage";
 import CheckoutPage from "./Pages/CheckoutPage";
 import PageNotFound from "./Pages/404";
-import ProductsProvider from "./Context/ProductsContext";
-import CartProvider from "./Context/CartContext";
 import Layout from "./Layout/Layout";
 import ScrollTop from "./Components/ScrollTop";
 
+// import ProductsProvider from "./Context/ProductsContext";
+// import CartProvider from "./Context/CartContext";
+
 function App() {
   return (
-    <CartProvider>
-      <ProductsProvider>
+   // <CartProvider>
+    //  <ProductsProvider>
         <Layout>
           <ScrollTop />
           <Routes>
@@ -23,8 +24,8 @@ function App() {
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </Layout>
-      </ProductsProvider>
-    </CartProvider>
+    //  </ProductsProvider>
+  //  </CartProvider>
   );
 }
 
