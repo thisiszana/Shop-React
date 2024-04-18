@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
@@ -11,23 +12,31 @@ import { MdDeleteOutline } from "react-icons/md";
 
 import { productQuantity, shortenText } from "../Helpers/helper";
 import styles from "./Card.module.css";
+import {
+  addItem,
+  decrease,
+  increase,
+  removeItem,
+} from "../Features/Cart/cartSlice";
 import "aos/dist/aos.css";
 
 function Card({ data }) {
   const { id, image, title, price } = data;
 
+  const state = useSelector((store) => store.cart);
   // const [state, dispatch] = useCart();
 
-  // const quantity = productQuantity(state, id);
-  const quantity = 0;
+  const dispatch = useDispatch();
+
+  const quantity = productQuantity(state, id);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const clickHandler = (type) => {
-    // dispatch({ type, payload: data });
-  };
+  // const clickHandler = (type) => {
+  //   dispatch({ type, payload: data });
+  // };
 
   return (
     <div className={styles.card} data-aos="fade-up-right">
@@ -40,23 +49,23 @@ function Card({ data }) {
         </Link>
         <div>
           {quantity === 1 && (
-            <button onClick={() => clickHandler("REMOVE_ITEM")}>
+            <button onClick={() => dispatch(removeItem(data))}>
               <MdDeleteOutline />
             </button>
           )}
 
           {quantity > 1 && (
-            <button onClick={() => clickHandler("DECREASE")}>-</button>
+            <button onClick={() => dispatch(decrease(data))}>-</button>
           )}
 
           {!!quantity && <span>{quantity}</span>}
 
           {quantity === 0 ? (
-            <button onClick={() => clickHandler("ADD_ITEM")}>
+            <button onClick={() => dispatch(addItem(data))}>
               <TbShoppingBagCheck />
             </button>
           ) : (
-            <button onClick={() => clickHandler("INCREASE")}>+</button>
+            <button onClick={() => dispatch(increase(data))}>+</button>
           )}
         </div>
       </div>

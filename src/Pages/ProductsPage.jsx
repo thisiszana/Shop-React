@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import Card from "../Components/Card";
 // import { useProducts } from "../Context/ProductsContext";
+import { fetchProducts } from "../Features/Product/productSlice";
+import Card from "../Components/Card";
 import Loader from "../Components/Loader";
 
 import {
@@ -15,8 +17,12 @@ import SearchBox from "../Components/SearchBox.jsx";
 import Sidebar from "../Components/Sidebar.jsx";
 
 function ProductsPage() {
+  const dispatch = useDispatch();
+  const { products, loading } = useSelector((store) => store.product);
+  
   // const products = useProducts();
-  const products = [];
+
+  // const products = [];
 
   const [search, setSearch] = useState("");
   const [displayed, setDisplayed] = useState([]);
@@ -25,10 +31,14 @@ function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
+
+  useEffect(() => {
     setDisplayed(products);
     setQuery(getInitialQuery(searchParams));
   }, [products]);
-  
+
   useEffect(() => {
     setSearchParams(query);
     let finalProducts = searchProducts(products, query.search);
@@ -42,7 +52,7 @@ function ProductsPage() {
       <SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
       <div className={styles.container}>
         <div className={styles.products}>
-          {!displayed.length && <Loader />}
+          {loading && <Loader />}
           {displayed.map((product) => (
             <Card key={product.id} data={product} />
           ))}
