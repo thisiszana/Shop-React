@@ -6,6 +6,8 @@ import BasketCardSidebar from "../Components/BasketCardSidebar";
 
 import styles from "./CheckoutPage.module.css";
 
+import empty from "../assets/cart-empty.jpg"
+
 function CheckoutPage() {
   const state = useSelector((store) => store.cart);
   // const [state, dispatch] = useCart();
@@ -15,8 +17,10 @@ function CheckoutPage() {
 
   if (!state.itemsCounter) {
     return (
-      <div className={styles.container}>
-        <p>Empty</p>
+      <div className={styles.emptyBox}>
+        <img src={empty} alt="cart empty" />
+        <p>Shopping cart is empty!</p>
+        <p>But it's never too late to fix it :)</p>
       </div>
     );
   }

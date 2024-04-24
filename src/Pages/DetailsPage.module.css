@@ -73,6 +73,7 @@
   .information {
     width: 100%;
     padding: 20px;
+    margin: 0 auto;
   }
 
   .information h3 {
@@ -80,7 +81,7 @@
   }
 
   .information div span {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .description {
@@ -103,7 +104,24 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
+
+  .container img {
+    margin: 20px auto;
+  }
+
   .description {
     width: 250px;
+  }
+}
+
+@media (max-width: 515px) {
+  .information div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information a {
+    width: fit-content;
+    margin-top: 10px;
   }
 }

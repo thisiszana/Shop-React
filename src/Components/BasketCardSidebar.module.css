@@ -39,6 +39,6 @@
 
 @media (max-width: 761px) {
   .sidebar {
-    position: relative;
+    position: static;
 }
 }

@@ -36,3 +36,9 @@
   text-align: center;
   margin: 0 2px;
 }
+
+@media (max-width: 761px) {
+  .card {
+    margin-top: 30px;
+  }
+}

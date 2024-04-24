@@ -1,0 +1,46 @@
+.container404 {
+  /* height: 1000px; */
+  text-align: center;
+  margin-top: 100px;
+}
+
+.container404 h1 {
+  font-size: 7rem;
+}
+
+.container404 p {
+  margin: 40px 0;
+}
+
+.container404 a {
+  text-decoration: none;
+  background-color: #fe5d42;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.container404 a:hover {
+  color: #000;
+}
+
+.container404 a svg {
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+@media (max-width: 855px) {
+  .container404 h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .container404 h1 {
+    font-size: 2.5rem;
+  }
+}
