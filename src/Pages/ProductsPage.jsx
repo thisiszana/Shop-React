@@ -19,7 +19,7 @@ import Sidebar from "../Components/Sidebar.jsx";
 function ProductsPage() {
   const dispatch = useDispatch();
   const { products, loading } = useSelector((store) => store.product);
-  
+
   // const products = useProducts();
 
   // const products = [];
@@ -51,13 +51,13 @@ function ProductsPage() {
     <>
       <SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
       <div className={styles.container}>
+        <Sidebar query={query} setQuery={setQuery} />
         <div className={styles.products}>
           {loading && <Loader />}
           {displayed.map((product) => (
             <Card key={product.id} data={product} />
           ))}
         </div>
-        <Sidebar query={query} setQuery={setQuery} />
       </div>
     </>
   );

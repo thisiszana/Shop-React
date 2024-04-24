@@ -1,11 +1,25 @@
 .container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .products {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 901px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 616px) {
+    .products {
+        justify-content: center;
+    }
 }

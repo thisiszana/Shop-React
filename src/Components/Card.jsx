@@ -18,7 +18,6 @@ import {
   increase,
   removeItem,
 } from "../Features/Cart/cartSlice";
-import "aos/dist/aos.css";
 
 function Card({ data }) {
   const { id, image, title, price } = data;
@@ -39,7 +38,7 @@ function Card({ data }) {
   // };
 
   return (
-    <div className={styles.card} data-aos="fade-up-right">
+    <div className={styles.card}>
       <img src={image} alt={shortenText(title)} />
       <h3>{shortenText(title)}</h3>
       <p>{price} $</p>

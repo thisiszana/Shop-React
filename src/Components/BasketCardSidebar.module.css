@@ -36,3 +36,9 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 761px) {
+  .sidebar {
+    position: relative;
+}
+}

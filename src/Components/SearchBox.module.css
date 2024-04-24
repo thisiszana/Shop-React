@@ -25,3 +25,11 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+
+@media (max-width: 901px) {
+  .search {
+    display: flex;
+    justify-content: center;
+  }
+}

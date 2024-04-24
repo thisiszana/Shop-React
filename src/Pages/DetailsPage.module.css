@@ -17,7 +17,7 @@
 
 .information {
   width: 100%;
-  border: 2px solid #fe5d42;
+  border: 2px dashed #fe5d42;
   margin: 10px;
   padding: 25px;
   border-radius: 50px;
@@ -62,4 +62,48 @@
 
 .information a svg {
   margin-right: 10px;
+}
+
+@media (max-width: 951px) {
+  .container img {
+    width: 250px;
+    margin-right: 25px;
+  }
+
+  .information {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .information h3 {
+    font-size: 1.3rem;
+  }
+
+  .information div span {
+    font-size: .9rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 866px) {
+  .description {
+    width: 300px;
+  }
+
+  .information h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 673px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  .description {
+    width: 250px;
+  }
 }
